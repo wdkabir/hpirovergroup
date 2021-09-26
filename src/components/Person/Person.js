@@ -19,11 +19,11 @@ const Person = (props) => {
                                 <h4 className="card-text">Selected Person: </h4>
                 {/* Displayed Selected Person Name and Image On Cart Area */}
                                 {
-                                    person.map(addedPerson => <small>
+                                    person.map(addedPerson => <small key = {addedPerson.key + Math.random() + ""}>
 
                             <div className="mb-2">
-                                <div className="card text-dark bg-ligh">
-                                        <div className="card-body">
+                                <div className="card text-dark bg-ligh" >
+                                        <div className="card-body" >
                                         <p>
                                         {addedPerson.name}
                                         <img className="ms-3" style={{ height: "30px", width: "30px", borderRadius: "50px" }} src={addedPerson.img} alt="" />
