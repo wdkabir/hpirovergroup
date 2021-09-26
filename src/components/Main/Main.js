@@ -1,9 +1,10 @@
 import React from 'react';
+// Imported Font-Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Main.css';
-
+// Destructuring Part
 const Main = (props) => {
     const {img, name, age, technology, designation, salary, country} = props.member;
     const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />
@@ -11,9 +12,9 @@ const Main = (props) => {
     const socialIconInstagram = <FontAwesomeIcon icon={faInstagram} />
     const socialIconGithub = <FontAwesomeIcon icon={faGithub} />
     return (
-        
+        // Person Card Section 
             <div className="col">
-                <div className="card h-100 p-3 bg-light bg-gradient shadow p-3 mb-5 bg-body rounded">
+                <div className="card p-3 bg-light bg-gradient shadow mb-5 bg-body rounded">
                         <img src={img} alt="" className="card-img-top img-thumbnail rounded-circle img-size mx-auto"/>
                     
                     <div className="card-body">
@@ -22,11 +23,11 @@ const Main = (props) => {
                         <p className="card-text">Technology: {technology} </p>
                         <p className="card-text">Designation: {designation} </p>
                         <p className="card-text">Country: {country} </p>
-                        <p className="card-text">Salary: ${salary} </p>
+                        <p className="card-text">Salary: <span className="fw-bold">${salary}</span> </p>
                         <p className="card-text text-center">
-                            <a href="" className="social-icons">{socialIconFacebook}</a> 
-                            <a href="" className="social-icons">{socialIconInstagram}</a>
-                            <a href="" className="social-icons">{socialIconGithub}</a>
+                            <a href="https://www.facebook.com/wdkabirhossain" className="social-icons">{socialIconFacebook}</a> 
+                            <a href="https://www.instagram.com/wdkabir/" className="social-icons">{socialIconInstagram}</a>
+                            <a href="https://github.com/wdkabir" className="social-icons">{socialIconGithub}</a>
                         </p>
                         <button onClick={() => props.handleAddPerson(props.member)} type="button" className="btn btn-success bg-gradient w-100"><span>{cartIcon}</span> Add Person</button> 
                     </div>
