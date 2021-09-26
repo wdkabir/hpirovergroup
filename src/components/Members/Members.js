@@ -23,7 +23,7 @@ const Members = () => {
                         <div className="row  row-cols-md-3 g-4 gy-5">
                             {/* Display Data In UI */}
                             {
-                                members.map(member => <Main key={member.key} member={member}
+                                members.map(member => <Main key={member.key} members={member}
                                 handleAddPerson = {handleAddPerson}
                                 >
                                 </Main>)

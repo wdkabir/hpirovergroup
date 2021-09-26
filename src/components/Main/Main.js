@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-
 import './Main.css';
 // Destructuring Part
 const Main = (props) => {
-    const {img, name, age, technology, designation, salary, country} = props.member;
+    const {img, name, age, technology, designation, salary, country} = props.members;
     const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />
     const socialIconFacebook = <FontAwesomeIcon icon={faFacebook} />
     const socialIconInstagram = <FontAwesomeIcon icon={faInstagram} />
@@ -29,7 +29,7 @@ const Main = (props) => {
                             <a href="https://www.instagram.com/wdkabir/" className="social-icons">{socialIconInstagram}</a>
                             <a href="https://github.com/wdkabir" className="social-icons">{socialIconGithub}</a>
                         </p>
-                        <button onClick={() => props.handleAddPerson(props.member)} type="button" className="btn btn-success bg-gradient w-100"><span>{cartIcon}</span> Add Person</button> 
+                        <button onClick={() => props.handleAddPerson(props.members)} type="button" className="btn btn-success bg-gradient w-100"><span>{cartIcon}</span> Add Person</button> 
                     </div>
                 </div>
             </div>
