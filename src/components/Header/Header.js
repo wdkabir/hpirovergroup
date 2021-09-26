@@ -33,6 +33,7 @@ const Header = () => {
                 </div>
             </nav>
             {/* Header Part */}
+            <div className="container-fluid">
             <div className="row">
                 <div className="col bg-success bg-gradient">
                     <div className="text-light p-5">
@@ -42,7 +43,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            
+            </div>
         </div>
     );
 };
